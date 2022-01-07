@@ -23,7 +23,7 @@ package Optsol.Components.Cache {
         }
 
          CacheConnection <|.. IDisposable
-         CacheConnection *- CacheSettings
+         CacheConnection *-- CacheSettings
          CacheConnection *- CacheException
     }
 
