@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32104.313
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".items", ".items", "{E0474AD8-58A5-4C1A-941A-2B8964C30E65}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Package", "1. Package", "{192CC53B-4CA1-4372-8080-6FFBA7C14E32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 . Internal", "2 . Internal", "{4500B33A-56C7-4A39-B806-18231ADC3014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optsol.Components.Cache", "src\Optsol.Components.Cache\Optsol.Components.Cache.csproj", "{430F7D9F-7420-42CB-8171-FF40ADE93D52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optsol.Components.Cache.Test", "test\Optsol.Components.Cache.Test\Optsol.Components.Cache.Test.csproj", "{8D8A4337-3F35-430F-BF61-1D92CA36BECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{430F7D9F-7420-42CB-8171-FF40ADE93D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430F7D9F-7420-42CB-8171-FF40ADE93D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430F7D9F-7420-42CB-8171-FF40ADE93D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430F7D9F-7420-42CB-8171-FF40ADE93D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D8A4337-3F35-430F-BF61-1D92CA36BECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8A4337-3F35-430F-BF61-1D92CA36BECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8A4337-3F35-430F-BF61-1D92CA36BECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8A4337-3F35-430F-BF61-1D92CA36BECF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{430F7D9F-7420-42CB-8171-FF40ADE93D52} = {192CC53B-4CA1-4372-8080-6FFBA7C14E32}
+		{8D8A4337-3F35-430F-BF61-1D92CA36BECF} = {4500B33A-56C7-4A39-B806-18231ADC3014}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21CFCC72-60F7-48F6-BCB7-CD794E765EDE}
+	EndGlobalSection
+EndGlobal
