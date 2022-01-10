@@ -22,20 +22,20 @@ package Optsol.Components.Cache {
             + GetDatabase(): IDatabase
         }
 
-         CacheConnection <|.. IDisposable
-         CacheConnection *-- CacheSettings
-         CacheConnection *- CacheException
+        IDisposable ..|> CacheConnection
+        CacheConnection *-- CacheSettings
+        CacheConnection *- CacheException
     }
 
     package Services {
-        interface IRedisCacheService {
+        interface ICacheService {
             + ReadAsync<T>(key: string): Task<T>
             + SaveAsync<T>(key: string): Task<T>
             + SaveAsync<T>(key: string, expirationInMinutes: int): Task<T>
             + DeleteAsync<T>(key: string): Task<T>
         }
 
-        class RedisCacheService implements IRedisCacheService {
+        class CacheService implements ICacheService {
             <<readonly>>
             - cacheConnection: CacheConnection
             <<readonly>>

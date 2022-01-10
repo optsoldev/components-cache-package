@@ -5,18 +5,26 @@ VisualStudioVersion = 17.1.32104.313
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".items", ".items", "{E0474AD8-58A5-4C1A-941A-2B8964C30E65}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
+		cache.puml = cache.puml
+		code-coverage.runsettings = code-coverage.runsettings
+		.asserts\component-cache.png = .asserts\component-cache.png
 		LICENSE = LICENSE
 		README.md = README.md
+		version-bump.ps1 = version-bump.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Package", "1. Package", "{192CC53B-4CA1-4372-8080-6FFBA7C14E32}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 . Internal", "2 . Internal", "{4500B33A-56C7-4A39-B806-18231ADC3014}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optsol.Components.Cache", "src\Optsol.Components.Cache\Optsol.Components.Cache.csproj", "{430F7D9F-7420-42CB-8171-FF40ADE93D52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optsol.Components.Cache", "src\Optsol.Components.Cache\Optsol.Components.Cache.csproj", "{430F7D9F-7420-42CB-8171-FF40ADE93D52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optsol.Components.Cache.Test", "test\Optsol.Components.Cache.Test\Optsol.Components.Cache.Test.csproj", "{8D8A4337-3F35-430F-BF61-1D92CA36BECF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Optsol.Components.Cache.Test", "test\Optsol.Components.Cache.Test\Optsol.Components.Cache.Test.csproj", "{8D8A4337-3F35-430F-BF61-1D92CA36BECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Optsol.Components.Commons", "..\components-commons\src\Optsol.Components.Commons\Optsol.Components.Commons.csproj", "{EAB9D01F-2EBD-4EDA-89D4-DAE286BA450B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +40,10 @@ Global
 		{8D8A4337-3F35-430F-BF61-1D92CA36BECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D8A4337-3F35-430F-BF61-1D92CA36BECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D8A4337-3F35-430F-BF61-1D92CA36BECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAB9D01F-2EBD-4EDA-89D4-DAE286BA450B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAB9D01F-2EBD-4EDA-89D4-DAE286BA450B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAB9D01F-2EBD-4EDA-89D4-DAE286BA450B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAB9D01F-2EBD-4EDA-89D4-DAE286BA450B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +51,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{430F7D9F-7420-42CB-8171-FF40ADE93D52} = {192CC53B-4CA1-4372-8080-6FFBA7C14E32}
 		{8D8A4337-3F35-430F-BF61-1D92CA36BECF} = {4500B33A-56C7-4A39-B806-18231ADC3014}
+		{EAB9D01F-2EBD-4EDA-89D4-DAE286BA450B} = {4500B33A-56C7-4A39-B806-18231ADC3014}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21CFCC72-60F7-48F6-BCB7-CD794E765EDE}
