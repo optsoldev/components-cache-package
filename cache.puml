@@ -1,0 +1,61 @@
+@startuml component-cache
+
+interface IDisposable
+
+package Optsol.Components.Cache {
+
+    package Exceptions {
+        class CacheException
+    }
+
+    package Settings {
+        class CacheSettings
+    }
+
+    package Connections {
+        class CacheConnection {
+            <<readonly>>
+            - connectionMultiplexer: ConnectionMultiplexer
+            <<readonly>>
+            - logger: ILogger
+            ==
+            + GetDatabase(): IDatabase
+        }
+
+        IDisposable ..|> CacheConnection
+        CacheConnection *-- CacheSettings
+        CacheConnection *- CacheException
+    }
+
+    package Services {
+        interface ICacheService {
+            + ReadAsync<T>(key: string): Task<T>
+            + SaveAsync<T>(key: string): Task<T>
+            + SaveAsync<T>(key: string, expirationInMinutes: int): Task<T>
+            + DeleteAsync<T>(key: string): Task<T>
+        }
+
+        class CacheService implements ICacheService {
+            <<readonly>>
+            - cacheConnection: CacheConnection
+            <<readonly>>
+            - logger: ILogger
+            ==
+            + ReadAsync<T>(key: string): Task<T>
+            + SaveAsync<T>(key: string): Task<T>
+            + SaveAsync<T>(key: string, expirationInMinutes: int): Task<T>
+            + DeleteAsync<T>(key: string): Task<T>
+        }
+
+        RedisCacheService *- CacheConnection
+        CacheException --* RedisCacheService
+    }
+
+    class RegisterCacheModule {
+        + {static} CacheModule(this IServicecollection services): IServiceCollection
+        Método de extensão usado para configurar o modulo de cache.
+        ..
+    }
+}
+
+@enduml
